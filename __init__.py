@@ -17,7 +17,7 @@ cacher = {}
 ListOfOption = dumps([i[-1] for i in MapFormat().Stocks()])
 
 def authenticate(request):
-    connector  = Connector("127.0.0.1", "root", "megh", "fintech")
+    connector  = Connector("127.0.0.1", "xxxx", "xxxx", "xxxxx")
     return connector.checkLogin(request.form["username"], request.form["password"])
 
 
