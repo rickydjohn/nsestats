@@ -1,0 +1,24 @@
+{%block clickbar %}
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">OpenInterest updates</a>
+        </div>
+        {% if logged_in %}
+        <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-right" action="/search" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <li><a href="/user"><span class="glyphicon glyphicon-user"></span> {{ user }}</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+        {% endif %}
+    </div>
+</nav>
+
+{%endblock clickbar%}
+

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block head %}
+        <style>
+            .container{
+                width: 100%;
+            }
+
+        </style>
+
+        {% endblock head %}
+{% block container %}
+    <div class="row">
+    <div class="well">{{ graph_data["info"] }}</div>
+        {% for data in graph_data["data"] %}
+        <div class="col-sm-4" style="width: 50%;">
+            <embed type="image/svg+xml" src={{ data["graph"]|safe}} style="max-wi">
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock container %}
